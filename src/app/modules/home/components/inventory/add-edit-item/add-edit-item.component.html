@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-2">
+      <div class="card-body">
+        <div class="card">
+          <h3 class="text-center">{{isEdit?'Edit':'Add'}} Item</h3>
+          <form class="m-3" [formGroup]="addEditFrom" (submit)="addEditFromSubmit()">
+            <div class="form-group">
+              <label for="group_name">Group Name</label>
+              <input type="text" class="form-control" formControlName="group_name">
+              <small class="text-danger">
+                <span
+                  *ngIf="addEditFrom.get('group_name')?.errors && (addEditFrom.get('group_name')?.touched || addEditFromSubmitted)">
+                  Required</span>
+              </small>
+            </div>
+            <div class="form-group">
+              <label for="item_type">Item Type</label>
+              <input type="text" class="form-control" formControlName="item_type">
+              <small class="text-danger">
+                <span
+                  *ngIf="addEditFrom.get('item_type')?.errors && (addEditFrom.get('item_type')?.touched || addEditFromSubmitted)">
+                  Required</span>
+              </small>
+            </div>
+            <div class="form-group">
+              <label for="product_type">Product Type</label>
+              <input type="text" class="form-control" formControlName="product_type">
+              <small class="text-danger">
+                <span
+                  *ngIf="addEditFrom.get('product_type')?.errors && (addEditFrom.get('product_type')?.touched || addEditFromSubmitted)">
+                  Required</span>
+              </small>
+            </div>
+
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea class="form-control" formControlName="description" rows="3"></textarea>
+              <small class="text-danger">
+                <span
+                  *ngIf="addEditFrom.get('description')?.errors && (addEditFrom.get('description')?.touched || addEditFromSubmitted)">
+                  Required</span>
+              </small>
+            </div>
+            <div class="form-group">
+              <label for="price">Price</label>
+              <input type="number" class="form-control" formControlName="price">
+              <small class="text-danger">
+                <span
+                  *ngIf="addEditFrom.get('price')?.errors && (addEditFrom.get('price')?.touched || addEditFromSubmitted)">
+                  Required</span>
+              </small>
+            </div>
+            <div class="form-group">
+              <label for="quantity">Quantity</label>
+              <input type="number" class="form-control" formControlName="quantity">
+              <small class="text-danger">
+                <span
+                  *ngIf="addEditFrom.get('quantity')?.errors && (addEditFrom.get('quantity')?.touched || addEditFromSubmitted)">
+                  Required</span>
+              </small>
+            </div>
+            <button class="btn btn-primary btn-block">Submit</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

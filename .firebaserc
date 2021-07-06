@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "adept-tangent-278503": {
+      "hosting": {
+        "shopBridgeapp": [
+          "adept-tangent-278503"
+        ]
+      }
+    }
+  }
+}
